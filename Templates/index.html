@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .container {
+        max-width: 900px;
+    }
+    .section {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    .section h2 {
+        color: #007bff;
+        font-weight: bold;
+    }
+    .section p {
+        font-size: 18px;
+        color: #555;
+    }
+    .highlight {
+        font-weight: bold;
+        color: #28a745;
+    }
+</style>
+
+<div class="container mt-5">
+    
+    <div class="section">
+        <h2>Project Overview</h2>
+        <p>
+            This project utilizes <span class="highlight">Machine Learning</span> to predict diseases based on user symptoms. 
+            By leveraging advanced models like <span class="highlight">Random Forest</span>, the system accurately identifies potential diseases and provides
+            users with reliable precautionary measures.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>How It Works?</h2>
+        <p>
+            The system collects <span class="highlight">user symptoms</span> and processes them through a trained machine learning model.
+            It then predicts the most likely disease and provides a list of recommended <span class="highlight">precautions</span> to help users 
+            take the necessary steps toward recovery.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Machine Learning Approach</h2>
+        <p>
+            Various algorithms like <span class="highlight">Decision Tree, SVM, K-Nearest Neighbor, Logistic Regression, Random Forest, and Naïve Bayes</span> 
+            were tested. Among them, <span class="highlight">Random Forest</span> was chosen due to its high accuracy, efficiency, and ability to handle complex data.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Precautionary Measures</h2>
+        <p>
+            Our system not only predicts diseases but also provides personalized <span class="highlight">precautions</span>. 
+            These include home remedies, diet recommendations, and necessary medical attention to ensure early-stage care and prevention.
+        </p>
+    </div>
+
+</div>
+
+{% endblock %}

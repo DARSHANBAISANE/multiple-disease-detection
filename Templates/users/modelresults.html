@@ -1,0 +1,118 @@
+{% extends 'users/userbase.html' %}
+{% block content %}
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 800px;
+        margin: auto;
+    }
+    .card {
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    .card-header {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .card-body {
+        padding: 30px;
+    }
+    .card-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #343a40;
+    }
+    .display-4 {
+        font-size: 32px;
+        font-weight: bold;
+        color: #28a745;
+    }
+    .text-info {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .text-muted {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #6c757d;
+    }
+    hr {
+        border-top: 2px solid #007bff;
+        width: 50%;
+        margin: 20px auto;
+    }
+    .table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+    .table th, .table td {
+        padding: 10px;
+        border: 1px solid #dee2e6;
+        text-align: center;
+    }
+    .table th {
+        background-color: #007bff;
+        color: white;
+    }
+    .best-model {
+        font-weight: bold;
+        color: #28a745;
+    }
+</style>
+
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center text-primary">Model Training Results</h2>
+
+        <div class="card mt-4 shadow">
+            <div class="card-header bg-primary text-white">
+                Training Summary
+            </div>
+            <div class="card-body text-center">
+                <h5 class="card-title">Model Accuracies</h5>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Accuracy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for model, accuracy in accuracies.items %}
+                        <tr>
+                            <td class="{% if model == best_model %}best-model{% endif %}">{{ model }}</td>
+                            <td class="{% if model == best_model %}best-model{% endif %}">{{ accuracy|floatformat:4 }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <h5 class="text-info">Best Performing Model: <span class="best-model">{{ best_model }}</span></h5>
+
+                <p class="text-muted">
+                    The best performing model is <strong class="best-model">{{ best_model }}</strong>, which achieved the highest accuracy.
+                    It has been saved for use in disease prediction.
+                </p>
+
+                <p class="text-muted">
+                    The model has been successfully trained and is now ready for disease prediction based on symptoms.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+{% endblock %}
