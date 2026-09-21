@@ -8,109 +8,275 @@
 [![Scikit-Learn](https://img.shields.io/badge/ML-Scikit--Learn%20%26%20XGBoost-F7931E.svg?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Publication](https://img.shields.io/badge/Published-IJARESM%20(April%202025)-success.svg)](http://www.ijaresm.com/)
 
-**A hybrid AI-powered web application that analyzes user symptoms to deliver precise disease predictions using Machine Learning algorithms and Google Gemini AI.**
+A machine learning-based web application developed using Python and Django to predict diseases based on user-provided symptoms. The project includes user registration, administrator account activation, dataset viewing, model training, and disease prediction.
 
 [Explore Features](#-key-features) • [Installation Guide](#-quick-start) • [Publication Details](#-research--publication)
 
 </div>
 
----
 
-## 📌 Overview
 
-The **Multiple Disease Detection System** bridges traditional Machine Learning models with Large Language Model (LLM) capabilities. By accepting user-inputted symptoms, the application leverages pre-trained **RandomForest** and **XGBoost** algorithms alongside **Google Gemini 1.5 Flash** to provide instant diagnostic insights.
-
-> 🎓 **Research Backing:** This system is based on research published in the *International Journal of All Research Education and Scientific Methods (IJARESM)*, Vol. 13, Issue 4, April 2025.
 
 ---
 
-## ✨ Key Features
 
-* 🤖 **Hybrid Prediction Engine:** Combines structured ML models (`RandomForest`, `XGBoost`) with generative AI (`Gemini 1.5 Flash`) for multi-perspective symptom analysis.
-* 🔐 **Secure User Activation:** Admin-driven account review and activation workflow to manage system access safely.
-* ⚡ **On-Demand Model Training:** Built-in backend endpoints allowing administrators to train and refresh up to 6 distinct ML models on the fly.
-* 📊 **Dataset Viewer:** Embedded tool enabling admins to inspect symptom-disease datasets (`symptom_disease_dataset.csv` and `sampled_500_diseases.csv`).
-* 💻 **Interactive UI:** Clean, responsive user interface developed with Django templates, custom CSS, and JavaScript.
+ ## 📖 Overview
 
----
+The Multiple Disease Prediction System is a web-based application designed to provide disease prediction using machine learning techniques.
 
-## 🛠️ Tech Stack
+The application provides an interface for users to register, log in, enter symptoms, and view prediction results. It also includes administrator functionality for managing user accounts and activating registered users.
 
-| Category | Technologies |
-| :--- | :--- |
-| **Backend** | Python, Django |
-| **AI & Machine Learning** | Google Gemini 1.5 Flash API, Scikit-Learn, XGBoost |
-| **Data Handling** | Pandas, NumPy, SQLite |
-| **Frontend** | HTML5, CSS3, JavaScript |
+The project focuses on applying machine learning algorithms to disease prediction through a Django web application.
 
----
+## ✨ Features
 
-## 🚀 Quick Start
+* User registration and login
+* Administrator login and dashboard
+* Admin-controlled user activation
+* Registered user management
+* Dataset viewing
+* Machine learning model training
+* Symptom-based disease prediction
+* Prediction results interface
+* Django-based web application
 
-### Prerequisites
-* Python 3.10+ installed
-* Google Gemini API Key ([Get your API Key here](https://aistudio.google.com/))
+## 🛠️ Technology Stack
 
-### Installation Steps
+| Category             | Technologies                                 |
+| -------------------- | -------------------------------------------- |
+| Programming Language | Python                                       |
+| Web Framework        | Django                                       |
+| Machine Learning     | Scikit-learn, Random Forest, XGBoost         |
+| Data Processing      | Pandas, NumPy                                |
+| Database             | SQLite                                       |
+| Frontend             | HTML, CSS, JavaScript                        |
+| Model Storage        | Pickle (.pkl), if used by the implementation |
 
-1. **Clone the Repository**
-   ```bash
-   git clone [https://github.com/DARSHANBAISANE/multiple-disease-detection.git](https://github.com/DARSHANBAISANE/multiple-disease-detection.git)
-   cd multiple-disease-detection
+## 🏗️ System Architecture
 
+```mermaid
+flowchart TD
+    A[User] --> B[Django Web Application]
+    B --> C[User Registration and Login]
+    C --> D[User Dashboard]
+    D --> E[Symptom Input]
+    E --> F[Machine Learning Pipeline]
+    F --> G[Random Forest]
+    F --> H[XGBoost]
+    G --> I[Prediction Result]
+    H --> I
+    D --> J[Dataset Viewer]
+    D --> K[Model Training]
+    K --> F
+    L[Administrator] --> M[Admin Dashboard]
+    M --> N[User Management]
+    N --> C
+    B --> O[(SQLite Database)]
+```
 
-   
-2. Set Up Virtual Environment
-Bash
+## 📂 Project Structure
+
+The following is a suggested structure. Update it to match the actual folders and files in your repository.
+
+```text
+multiple-disease-detection/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── manage.py
+│
+├── Multiple_Disease_Detection/
+│   ├── settings.py
+│   ├── urls.py
+│   ├── views.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── users/
+│   ├── views.py
+│   ├── models.py
+│   └── forms.py
+│
+├── admins/
+│   └── views.py
+│
+├── templates/
+├── static/
+├── dataset/
+├── models/
+│
+└── docs/
+    └── screenshots/
+```
+
+## 🖥️ Application Preview
+
+The following section uses screenshots from the actual application. Upload the image files into a folder named `docs/screenshots/` in your GitHub repository, then use the corresponding Markdown image paths.
+
+### 1. Home Page
+
+![Home Page](docs/screenshots/home-page.png)
+
+### 2. User Registration
+
+![User Registration](docs/screenshots/register-page.png)
+
+### 3. User Login
+
+![User Login](docs/screenshots/user-login.png)
+
+### 4. User Dashboard
+
+![User Dashboard](docs/screenshots/user-dashboard.png)
+
+### 5. Symptom Input
+
+![Symptom Input](docs/screenshots/input.png)
+
+### 6. Prediction Output
+
+![Prediction Output](docs/screenshots/output.png)
+
+### 7. Model Results
+
+![Model Results](docs/screenshots/model-results.png)
+
+### 8. Dataset Viewer
+
+![Dataset Viewer](docs/screenshots/dataset.png)
+
+### 9. Admin Login
+
+![Admin Login](docs/screenshots/admin-login.png)
+
+### 10. Admin Dashboard
+
+![Admin Dashboard](docs/screenshots/admin-dashboard.png)
+
+### 11. Registered Users
+
+![Registered Users](docs/screenshots/user-list.png)
+
+> **Note:** The screenshot filenames above are suggested names. Rename your uploaded screenshots accordingly, or update the Markdown paths to match your actual filenames.
+
+## 🧠 Machine Learning
+
+The project documentation describes a machine learning pipeline for disease prediction.
+
+The algorithms identified for the prediction workflow are:
+
+* Random Forest
+* XGBoost
+
+The project has also been described as using a six-classifier machine learning pipeline. The remaining classifier names and their exact roles should be confirmed from the original training implementation before listing them individually.
+
+### Machine Learning Workflow
+
+1. Load the dataset.
+2. Prepare the data for model training.
+3. Train the machine learning models.
+4. Process user-provided symptoms.
+5. Generate a prediction using the configured model.
+6. Display the prediction result through the Django interface.
+
+> Add the exact preprocessing steps, dataset details, model evaluation metrics, and classifier names after verifying them from the implementation.
+
+## ⚙️ Installation and Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/DARSHANBAISANE/multiple-disease-detection.git
+cd multiple-disease-detection
+```
+
+### 2. Create a Virtual Environment
+
+```bash
 python -m venv env
-# Windows:
-env\Scripts\activate
-# macOS/Linux:
+```
+
+Activate it on Windows:
+
+```powershell
+.\env\Scripts\Activate.ps1
+```
+
+Activate it on macOS or Linux:
+
+```bash
 source env/bin/activate
+```
 
-3. Install Dependencies
+### 3. Install Dependencies
 
-Bash
-pip install -r requirments.txt
+Use the dependency filename that exists in your repository.
 
-4. Environment Configuration
-Create a .env file in the root directory and add your API credentials:
+```bash
+pip install -r requirements.txt
+```
 
-Code snippet
-GEMINI_API_KEY=your_gemini_api_key_here
-SECRET_KEY=your_django_secret_key
+If your file is named `requirments.txt`, use that filename instead.
 
-5. Run Migrations & Launch Server
+### 4. Apply Database Migrations
 
-Bash
+```bash
 python manage.py migrate
+```
+
+### 5. Run the Application
+
+```bash
 python manage.py runserver
-Open http://127.0.0.1:8000/ in your browser.
+```
 
-⚙️ Model Training Note
-⚠️ Pre-trained .pkl model files are excluded from this repository due to GitHub file size limits.
+Open the local development address shown in your terminal, typically:
 
-To generate model files locally:
+```text
+http://127.0.0.1:8000/
+```
 
-Log in to the Admin Dashboard (/AdminLogin/).
+## 🚀 Usage
 
-Trigger the On-Demand Training endpoint to generate and save trained models into your workspace.
+1. Run the Django application.
+2. Open the home page in your browser.
+3. Register a new user account.
+4. Activate the account through the administrator interface if required.
+5. Log in to the user dashboard.
+6. Enter symptoms on the prediction page.
+7. View the prediction result.
+8. Explore the dataset and model-training features.
 
-🔐 Default Admin Credentials
-URL: /AdminLogin/
+## 🔐 Security
 
-Username: admin
+* Do not publish passwords or secret credentials.
+* Keep private configuration files out of GitHub.
+* Change any default administrator credentials.
+* Use secure Django settings before deploying publicly.
+* Do not expose sensitive user information.
 
-Password: admin
+## ⚠️ Limitations
 
-(Note: Please update the default password after initial setup in a production context.)
+* Predictions may be inaccurate or incomplete.
+* Results depend on the quality of the dataset and model implementation.
+* The system is intended for educational and research purposes.
+* Predictions must not be used as a substitute for professional medical advice, diagnosis, or treatment.
+* The project should not be considered clinically validated without appropriate evidence.
 
-📄 Research & Publication
-Paper Title: Multiple Disease Detection System
+## 📄 Research Publication
 
-Journal: International Journal of All Research Education and Scientific Methods (IJARESM)
+The project documentation references a publication in **IJARESM, Volume 13, Issue 4, April 2025**.
 
-Publication Date: Vol. 13, Issue 4, April 2025
+https://drive.google.com/file/d/1cVhpGdXQQ9johUM8lUf39W4_qKFa3rJ_/view?usp=sharing
 
-👤 Author
-Darshan Baisane - GitHub Profile
+## 👨‍💻 Author
+
+**Darshan Baisane**
+
+* GitHub: [DARSHANBAISANE](https://github.com/DARSHANBAISANE)
+* Project Repository: [Multiple Disease Detection](https://github.com/DARSHANBAISANE/multiple-disease-detection)
+
+---
+
+⭐ If you find this project interesting, feel free to explore the repository.
