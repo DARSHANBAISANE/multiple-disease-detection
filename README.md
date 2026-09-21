@@ -110,53 +110,36 @@ multiple-disease-detection/
     └── screenshots/
 ```
 
-## 🖥️ Application Preview
-
-The following section uses screenshots from the actual application. Upload the image files into a folder named `docs/screenshots/` in your GitHub repository, then use the corresponding Markdown image paths.
+## 💻 Application Preview
 
 ### 1. Home Page
-
-![Home Page](docs/screenshots/home-page.png)
+![Home Page](docs/screenshots/home%20page.png)
 
 ### 2. User Registration
-
-![User Registration](docs/screenshots/register-page.png)
+![User Registration](docs/screenshots/Register%20page.png)
 
 ### 3. User Login
+![User Login](docs/screenshots/user%20login%20page.png)
 
-![User Login](docs/screenshots/user-login.png)
-
-### 4. User Dashboard
-
-![User Dashboard](docs/screenshots/user-dashboard.png)
+### 4. User Home Page
+![User Home Page](docs/screenshots/user%20home%20page.png)
 
 ### 5. Symptom Input
-
 ![Symptom Input](docs/screenshots/input.png)
 
 ### 6. Prediction Output
-
 ![Prediction Output](docs/screenshots/output.png)
 
-### 7. Model Results
+### 7. Dataset
+![Dataset](docs/screenshots/dataset.png)
 
-![Model Results](docs/screenshots/model-results.png)
+### 8. Admin Login
+![Admin Login](docs/screenshots/admin%20login%20page.png)
 
-### 8. Dataset Viewer
+### 9. Admin Home Page
+![Admin Home Page](docs/screenshots/admin%20home%20page.png)
 
-![Dataset Viewer](docs/screenshots/dataset.png)
 
-### 9. Admin Login
-
-![Admin Login](docs/screenshots/admin-login.png)
-
-### 10. Admin Dashboard
-
-![Admin Dashboard](docs/screenshots/admin-dashboard.png)
-
-### 11. Registered Users
-
-![Registered Users](docs/screenshots/user-list.png)
 
 > **Note:** The screenshot filenames above are suggested names. Rename your uploaded screenshots accordingly, or update the Markdown paths to match your actual filenames.
 
